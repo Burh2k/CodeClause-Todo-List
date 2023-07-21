@@ -13,24 +13,35 @@
     <!-- Header for Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="conversion.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+    </style>
 </head>
 
 <body class="bg-sky-300">
     <div class="lg:mx-auto lg:my-52 lg:w-max lg:h-full bg-green-300 shadow-2xl border border-black rounded-3xl">
-        <h1 class="lg:p-8 text-center font-bold text-5xl">
+        <h1 class="lg:p-8 text-center font-bold text-5xl" style="font-family: 'Indie Flower', cursive;">
             Things to be done
         </h1>
-        <div class="lg:ms-10 flex justify-between">
-            <input type="text" id="input" class="w-80 rounded-full focus:outline-none first:ps-5" placeholder="Tasks">
-            <button type="button" onclick="save()" class="lg:me-9 w-9 border border-black rounded-full">
+        <div class="lg:ms-10 flex justify-between text-lg font-bold" style="font-family:'Mynerve', cursive;">
+            <input type="text" id="input" class="w-72 bg-white rounded-full focus:outline-none first:ps-5"
+                placeholder="Tasks">
+            <button onclick="save()" class="lg:me-9 w-9 border border-black rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
                     <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"></path>
                 </svg>
             </button>
         </div>
-        <div class="lg:m-10 lg:ps-5 lg:w-80 lg:h-80 bg-white rounded-xl border border-black">
+        <div class="lg:m-10 lg:mb-4 lg:w-80 lg:h-80 bg-white rounded-xl border border-black">
+            <div id="list" class="lg:mx-5 lg:my-3 text-lg font-bold" style="font-family:'Mynerve', cursive;">
+            </div>
         </div>
+        <button onclick="clearlist()" class="lg:ms-10 lg:mb-5 lg:px-3 lg:py-1 border border-black rounded-full hover:text-white hover:bg-black">
+            Clear
+        </button>
     </div>
     <script src="scripting-file.js"></script>
 </body>
+
 </html>
